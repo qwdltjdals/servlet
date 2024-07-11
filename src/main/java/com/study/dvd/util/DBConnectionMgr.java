@@ -32,7 +32,6 @@ import java.util.Vector;
 
 import com.study.dvd.config.DBConfig;
 
-
 /**
  * Manages a java.sql.Connection pool.
  *

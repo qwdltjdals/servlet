@@ -9,12 +9,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/dvd/list")
-public class DVDListSeervlet extends HttpServlet {
+@WebServlet("/search")
+public class SarchDvdServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-	};
+		req.getRequestDispatcher("/WEB-INF/views/search_dvd.jsp").forward(req, resp); // forward = 넘겨줘라
+	}
 }
