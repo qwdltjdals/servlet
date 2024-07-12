@@ -3,6 +3,11 @@
 <%@page import="com.study.dvd.dao.ProducerDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+    <% 
+		String searchText = request.getParameter("searchText");
+		List<Producer> pros = ProducerDao.searchProducerByProducerName(searchText);
+	%> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,14 +30,7 @@
 		class="search-input"
 		placeholder="제작사를 입력하세요">
 		<button onclick="handleSearchClickProducer()">검색</button>
-
 	</div>
-
-	
-	<% 
-		String searchText = request.getParameter("searchText");
-		List<Producer> pros = ProducerDao.searchProducerByProducerName(searchText);
-	%>
 	<table>
 		<thead>
 			<tr>
@@ -43,6 +41,7 @@
 		<tbody>
 			<%
 				for(Producer producer : pros) { // foreach문 pros에서 producer를 한개씩 빼서 비교
+					// producer.forEach(producer -> { }) 
 			%>
 			<tr>
 				<td><%=producer.getProducerId() %></td>

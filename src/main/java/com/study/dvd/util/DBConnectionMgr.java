@@ -32,11 +32,7 @@ import java.util.Vector;
 
 import com.study.dvd.config.DBConfig;
 
-/**
- * Manages a java.sql.Connection pool.
- *
- * @author  Anil Hemrajani
- */
+
 public class DBConnectionMgr {
 
     private Vector connections = new Vector(10);

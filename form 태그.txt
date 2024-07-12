@@ -1,0 +1,4 @@
+form 태그 안에 들어있으면 name="" 에 들어간 것이 키값으로 잡힘
+
+form 태그 안에 들어있는 버튼은 무조건 submit 타입으로 됨
+onClick을 주고싶으면 type를 button으로 잡아줘야함
